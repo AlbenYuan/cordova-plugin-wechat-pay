@@ -48,7 +48,7 @@
                 <true/>
             </dict>
         </config-file>
-        
+
 
         <config-file target="*-Info.plist" parent="CFBundleURLTypes">
             <array>
@@ -68,9 +68,9 @@
         <source-file src="src/ios/CDVWechat.m" />
 
         <!-- Wechat Official -->
-        <header-file src="src/ios/libs/OpenSDK1.7.5/WXApi.h" />
-        <header-file src="src/ios/libs/OpenSDK1.7.5/WXApiObject.h" />
-        <source-file src="src/ios/libs/OpenSDK1.7.5/libWeChatSDK.a" framework="true" />
+        <header-file src="src/ios/libs/OpenSDK1.7.7/WXApi.h"/>
+        <header-file src="src/ios/libs/OpenSDK1.7.7/WXApiObject.h"/>
+        <source-file src="src/ios/libs/OpenSDK1.7.7/libWeChatSDK.a" framework="true"/>
 
         <!-- Other required frameworks -->
         <framework src="libz.tbd" />
@@ -95,13 +95,14 @@
             </feature>
             <preference name="WECHATAPPID" value="$WECHATAPPID"/>
         </config-file>
-        
+
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
